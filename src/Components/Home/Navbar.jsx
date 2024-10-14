@@ -32,7 +32,7 @@ function Navbar() {
                 </div>
                 <div className="text-white">
                     <button className="fixed-button">Light Mode</button>
-                </div>
+                </div>  
             </div>
         </>
     )
