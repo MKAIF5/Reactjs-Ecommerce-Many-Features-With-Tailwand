@@ -27,12 +27,10 @@ function Navbar() {
                     </span>
                 </div>
                 <div className="text-white flex gap-10">
-                <button className="p-2 bg-orange-500 rounded-2xl w-20">Sign up</button>
-                <button className="bg-zinc-700 p-2 rounded-2xl w-20">Log In</button>    
+                    <button className="p-2 bg-orange-500 rounded-2xl w-20">Sign up</button>
+                    <button className="bg-zinc-700 p-2 rounded-2xl w-20">Log In</button>
                 </div>
-                <div className="text-white">
-                    <button className="fixed-button">Light Mode</button>
-                </div>  
+                
             </div>
         </>
     )
