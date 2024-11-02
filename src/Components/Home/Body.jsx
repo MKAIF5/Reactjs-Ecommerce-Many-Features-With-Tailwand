@@ -1,7 +1,7 @@
 function Body() {
     return (
         <>
-            <div className="mx-auto my-32">
+            <div id="body" className="mx-auto my-32">
                 <h1 className='text-white text-center text-5xl font-extrabold
                 '>Welcome To Kaif's Store</h1>
                 <br />
