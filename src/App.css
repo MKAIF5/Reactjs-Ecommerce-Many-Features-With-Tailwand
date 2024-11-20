@@ -13,4 +13,28 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+};
+
+.app.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.app.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

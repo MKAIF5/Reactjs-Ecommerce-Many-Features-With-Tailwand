@@ -1,12 +1,11 @@
-function Quiz() {
+function Messages() {
     return (
         <>
             <div>
-                Quiz
+                messages
             </div>
-
         </>
     )
 }
 
-export default Quiz
+export default Messages

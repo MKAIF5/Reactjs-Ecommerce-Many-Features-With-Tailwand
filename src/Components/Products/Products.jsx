@@ -1,12 +1,12 @@
-function Quiz() {
+function Products() {
     return (
         <>
-            <div>
-                Quiz
-            </div>
 
+            <div>
+                Products
+            </div>
         </>
     )
 }
 
-export default Quiz
+export default Products
