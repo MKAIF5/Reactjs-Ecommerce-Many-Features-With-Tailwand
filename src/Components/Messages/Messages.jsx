@@ -1,7 +1,10 @@
+import Navbar from "../Home/Navbar";
+
 function Messages() {
     return (
         <>
-            <div>
+         <Navbar />
+            <div className="text-white">
                 messages
             </div>
         </>

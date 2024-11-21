@@ -1,28 +1,25 @@
-import { createContext, useState } from 'react';
-import Switcher from "./Components/Home/Switcher";
 import Home from './Components/Home/Home';
+import Products from './Components/Products/Products';
+import Messages from './Components/Messages/Messages';
+import Contact from './Components/Contact/Contact';
 import Quiz from './Components/Quiz/Quiz';
 import { Routes, Route} from "react-router-dom";
 import "./App.css";
 
-export const ThemeContext = createContext(null);
 
 function App() {
-    const [theme, setTheme] = useState("light");
 
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    };
 
     return (
         <>
-            <ThemeContext.Provider value={{ theme, toggleTheme }}>
-                <div className={`app ${theme}`} id={theme}>
-                    <Home />
-                    <Switcher />
-
-                </div>
-            </ThemeContext.Provider>
+            <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/products" element={<Products/>}/>
+            <Route path="/quiz" element={<Quiz />}/>
+            <Route path="/messages" element={<Messages />}/>
+            <Route path="/contact" element={<Contact />}/>
+            
+            </Routes>
         </>
     );
 }

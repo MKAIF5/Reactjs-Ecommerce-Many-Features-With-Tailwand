@@ -1,15 +1,14 @@
 import Navbar from "../Home/Navbar";
 
-function Products() {
+function Contact() {
     return (
         <>
          <Navbar />
-
             <div className="text-white">
-                Products
+                contact
             </div>
         </>
     )
 }
 
-export default Products
+export default Contact

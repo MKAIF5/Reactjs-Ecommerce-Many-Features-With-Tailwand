@@ -1,24 +1,25 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../App';
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    const { theme } = useContext(ThemeContext);
 
     return (
         <div className="bg-zinc-900 text-white p-10 flex justify-around gap-16 items-center">
-            <h1 className="text-4xl font-semibold font-roboto">Kaif's Store</h1>
+            <h1 className="text-4xl font-semibold">Kaif's Store</h1>
+                <Link>
             <ul className="flex gap-9 text-base cursor-pointer">
-                <li>Home</li>
-                <li>Products</li>
-                <li>Quiz</li>
-                <li>Contact</li>
-                <li>Messages</li>
+                <Link><li>Home</li></Link>
+                <Link to={"/products"}><li>Products</li></Link>
+                <Link to={"/quiz"}><li>Quiz</li></Link>
+                <Link to={"/contact"}><li>Contact</li></Link>
+                <Link to={"/Messages"}><li>Messages</li></Link>
             </ul>
+                </Link>
             <div className="relative">
                 <input
                     type="text"
                     placeholder="Search"
-                    className="w-60 p-3 rounded-3xl outline-none placeholder-orange-500 pr-10"
+                    className="w-60 p-3 rounded-3xl outline-none
+                    text-black placeholder-orange-500 pr-10"
                 />
                 <span className="absolute right-3 top-1/2 transform -translate-y-1/2">
                     <i className="fas fa-search text-black"></i>
