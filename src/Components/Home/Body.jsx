@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Body() {
     return (
         <>
@@ -10,8 +12,8 @@ function Body() {
                 >Explore The Best Products At Unbeatable Prices</h1>
                 <br /><br />
                 <div className="flex justify-center">
-                    <button className="p-2 bg-orange-500 text-white
-                    rounded-xl font-medium">Add Your Product</button>
+                    <Link to={"/products"} className="p-2 bg-orange-500 text-white
+                    rounded-xl font-medium">View All Products</Link>
                 </div>
             </div>
         </>

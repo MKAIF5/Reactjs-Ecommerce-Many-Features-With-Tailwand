@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
 
     return (
-        <div className="bg-zinc-900 text-white p-10 flex justify-around gap-16 items-center">
-            <h1 className="text-4xl font-semibold">Kaif's Store</h1>
+        <div className="bg-zinc-900 text-white p-10 flex justify-around gap-16
+         items-center">
+            <h1 className="text-4xl font-semibold flex gap-2">Kaif's <span>Store</span></h1>
                 <Link>
             <ul className="flex gap-9 text-base cursor-pointer">
                 <Link><li>Home</li></Link>
