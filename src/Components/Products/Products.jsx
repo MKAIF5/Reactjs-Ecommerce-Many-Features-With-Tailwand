@@ -1,9 +1,9 @@
 import axios from "axios";
 import Navbar from "../Home/Navbar";
 import { useEffect, useState } from "react";
+import { CiSearch } from "react-icons/ci";
 import Card from "./Card";
 import loading from "./img/ZKZg.gif";
-import { CiSearch } from "react-icons/ci";
 
 
 function Products() {
@@ -56,11 +56,12 @@ function Products() {
             </div>
 
 
-            {product === null ?
-                <div className="flex justify-center">
-                    <img src={loading} alt="" />
-                </div>
-                : null
+            {
+                product === null ?
+                    <div className="flex justify-center">
+                        <img src={loading} alt="" />
+                    </div>
+                    : null
             }
 
             <div>
