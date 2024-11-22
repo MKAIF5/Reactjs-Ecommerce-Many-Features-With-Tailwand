@@ -23,15 +23,15 @@ function Quiz() {
                         <div className="border border-white p-3 my-5 cursor-pointer">
                             <h2>Makeup</h2>
                         </div>
-                        
+
                         <div className="border border-white p-3 my-5 cursor-pointer">
                             <h2>Clothes</h2>
                         </div>
-                        
+
                         <div className="border border-white p-3 my-5 cursor-pointer">
                             <h2>Foods</h2>
                         </div>
-                        
+
                         <div className="border border-white p-3 my-5 cursor-pointer">
                             <h2>Medicine</h2>
                         </div>

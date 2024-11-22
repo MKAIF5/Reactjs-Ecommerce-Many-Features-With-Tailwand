@@ -1,12 +1,13 @@
 import { CiHeart } from "react-icons/ci";
 import { FiEye } from "react-icons/fi";
-import { FaStar} from "react-icons/fa";
+import ReactStars from 'react-stars'
+
 
 
 function Card(props) {
 
     const discountPrice = (props.price - (props.discountPercentage * (props.price / 100))).toFixed(2);
-    
+
     return (
         <>
             <div>
@@ -46,12 +47,14 @@ items-center text-xs h-6'>
                                 {props.price}</span></p>
                     </div>
                     <div className="flex gap-1">
-                        <FaStar className="text-yellow-400 w-5 h-5" />
-                        <FaStar className="text-yellow-400 w-5 h-5" />
-                        <FaStar className="text-yellow-400 w-5 h-5" />
-                        <FaStar className="text-yellow-400 w-5 h-5" />
-                        <FaStar className="text-yellow-400 w-5 h-5" />
-                        <p className="text-sm text-gray-400 ml-2">(88)</p>
+                        <ReactStars
+                         count={5}
+                         value={props.rating}
+                        // onChange={ratingChanged}
+                        size={24}
+                        color2={'#ffd700'} />
+
+                        <p className="text-sm text-gray-400 ml-2">( {props.stock} )</p>
                     </div>
                 </div>
             </div>
