@@ -68,7 +68,7 @@ function Products() {
                 <div className="flex flex-wrap justify-center gap-7 my-10
                 text-white text-wrap">
 
-                    {searching.length === 0 ? "product not found" : ""}
+                    {searching.length === 0 ? "Product Not Found" : ""}
 
 
                     {
