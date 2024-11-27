@@ -59,8 +59,12 @@ function Navbar() {
 
                 {/* Sign Up and Log In Buttons */}
                 <div className="flex gap-10">
+                    <Link to={"/signUp"}>
                     <button className="p-2 rounded-2xl w-20 bg-orange-500">Sign up</button>
+                    </Link>
+                    <Link to={"/login"}>
                     <button className="p-2 rounded-2xl w-20 bg-orange-500">Log In</button>
+                    </Link>
                 </div>
 
             </div>

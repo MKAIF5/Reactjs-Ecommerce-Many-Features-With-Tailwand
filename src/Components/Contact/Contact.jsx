@@ -28,7 +28,6 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // Basic Validation
         let validationErrors = {};
         if (!formData.name) validationErrors.name = "Name is required!";
         if (!formData.email) validationErrors.email = "Email is required!";
@@ -42,8 +41,6 @@ function Contact() {
             setErrors({});
             setIsSubmitted(true);
             setIsError(false);
-            // Form submission logic here (e.g., send data to the backend)
-            // For now, we simulate success
             console.log("Form data submitted:", formData);
         }
     };
@@ -55,7 +52,6 @@ function Contact() {
 
                 <div className="flex justify-center mt-5">
                     <div className="w-full max-w-md">
-                        {/* Success/Error Message */}
                         {isSubmitted && !isError && (
                             <div className="text-green-600 text-center mb-4">Thank you for contacting us! We will get back to you soon.</div>
                         )}
@@ -109,7 +105,7 @@ function Contact() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    className="w-full py-2 px-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 >
                                     Send Message
                                 </button>
