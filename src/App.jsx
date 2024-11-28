@@ -4,9 +4,9 @@ import Messages from './Components/Messages/Messages';
 import Contact from './Components/Contact/Contact';
 import Quiz from './Components/Quiz/Quiz';
 import { Routes, Route} from "react-router-dom";
-import "./App.css";
 import Login from './Components/Login/Login';
 import SignUp from './Components/signUp/SignUp';
+import "./App.css";
 
 
 function App() {

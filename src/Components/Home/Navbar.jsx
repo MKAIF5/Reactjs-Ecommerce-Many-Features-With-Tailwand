@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-    // State to toggle the mobile menu (hamburger menu)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Function to toggle the menu visibility on mobile/tablet
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -13,7 +11,6 @@ function Navbar() {
     return (
         <div className="bg-zinc-900 text-white p-6 md:p-10 flex justify-between items-center
     h-32">
-            {/* Store name */}
             <h1 className="text-4xl font-semibold flex gap-2">
                 Kaif's <span>Store</span>
             </h1>
@@ -25,24 +22,37 @@ function Navbar() {
             <div className={`lg:flex gap-9 text-base cursor-pointer items-center ${isMenuOpen ? "block" : "hidden"
                 } lg:block`}>
 
-                <ul
-                className="flex gap-12 mr-8"
-                >
-                    <Link to="/">
+                <ul className="flex gap-12 mr-8">
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
+                    >
                         <li>Home</li>
-                    </Link>
-                    <Link to="/products">
+                    </NavLink>
+                    <NavLink
+                        to="/products"
+                        className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
+                    >
                         <li>Products</li>
-                    </Link>
-                    <Link to="/quiz">
+                    </NavLink>
+                    <NavLink
+                        to="/quiz"
+                        className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
+                    >
                         <li>Quiz</li>
-                    </Link>
-                    <Link to="/contact">
+                    </NavLink>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
+                    >
                         <li>Contact</li>
-                    </Link>
-                    <Link to="/Messages">
+                    </NavLink>
+                    <NavLink
+                        to="/messages"
+                        className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
+                    >
                         <li>Messages</li>
-                    </Link>
+                    </NavLink>
                 </ul>
 
 
@@ -60,16 +70,14 @@ function Navbar() {
                 {/* Sign Up and Log In Buttons */}
                 <div className="flex gap-10">
                     <Link to={"/signUp"}>
-                    <button className="p-2 rounded-2xl w-20 bg-orange-500">Sign up</button>
+                        <button className="p-2 rounded-2xl w-20 bg-orange-500">Sign up</button>
                     </Link>
                     <Link to={"/login"}>
-                    <button className="p-2 rounded-2xl w-20 bg-orange-500">Log In</button>
+                        <button className="p-2 rounded-2xl w-20 bg-orange-500">Log In</button>
                     </Link>
                 </div>
 
             </div>
-            {/* Search Input */}
-
         </div>
     );
 }
