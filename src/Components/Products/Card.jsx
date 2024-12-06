@@ -1,10 +1,14 @@
 import { CiHeart } from "react-icons/ci";
 import { FiEye } from "react-icons/fi";
+import { useSelector } from "react-redux";
 import ReactStars from 'react-stars'
 
 
 
 function Card(props) {
+
+    const theme = useSelector((state) => state.theme.theme);
+
 
     const discountPrice = (props.price - (props.discountPercentage * (props.price / 100))).toFixed(2);
 
@@ -38,7 +42,9 @@ items-center text-xs h-6'>
                 </div>
                 <div className="mt-5 leading-9">
                     <div className="max-w-60">
-                        <p className="text-base font-medium">{props.name}</p>
+                        <p className={`text-base font-medium ${theme === "dark" ?
+                            "text-white" : "text-black"}`}
+                        >{props.name}</p>
                     </div>
                     <div>
                         <p
