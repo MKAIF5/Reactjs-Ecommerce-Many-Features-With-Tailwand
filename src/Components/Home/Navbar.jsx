@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,8 +21,8 @@ function Navbar() {
     };
 
     return (
-        <div className={`bg-zinc-900 text-white p-6 md:p-10 flex justify-between items-center h-32 ${theme === 'dark' ? 'bg-black' : 'bg-zinc-500'}`}>
-            <h1 className="text-4xl font-semibold flex gap-2">
+        <div className={`bg-zinc-900 text-white p-6 md:p-10 flex justify-between items-center h-32 ${theme === 'dark' ? 'bg-black' : 'bg-gray-100'}`}>
+            <h1 className={`text-4xl font-semibold flex gap-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                 Kaif's <span>Store</span>
             </h1>
 
@@ -32,7 +31,7 @@ function Navbar() {
             </div>
 
             <div className={`lg:flex gap-9 text-base cursor-pointer items-center ${isMenuOpen ? "block" : "hidden"} lg:block`}>
-                <ul className="flex gap-12 text-sm">
+                <ul className={`flex gap-12 text-sm ${theme === "dark" ? "text-white": "text-black"}`}>
                     <NavLink
                         to="/"
                         className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
@@ -69,25 +68,24 @@ function Navbar() {
                     <input
                         type="text"
                         placeholder="Search"
-                        className="w-60 p-3 rounded-3xl outline-none text-black placeholder-orange-500 pr-10"
+                        className={`w-60 p-3 rounded-3xl outline-none text-black placeholder-orange-500 pr-10
+                     ${theme === 'dark' ? 'bg-white' : 'bg-gray-200'}`}
                     />
                     <span className="absolute right-3 top-1/2 transform -translate-y-1/2">
                         <i className="fas fa-search text-black"></i>
                     </span>
                 </div>
 
-                {/* Dark Mode / Light Mode Toggle */}
                 <button
                     className="text-white text-3xl"
                     onClick={toggleDarkLight}
                 >
                     {
                         theme === 'dark' ?
-                            <IoSunnyOutline /> : <MdOutlineDarkMode />
+                            <IoSunnyOutline/> : <MdOutlineDarkMode className="text-black" />
                     }
                 </button>
 
-                {/* Sign Up and Log In Buttons */}
                 <div className="flex gap-10 text-sm">
                     <Link to={"/signUp"}>
                         <button className="p-2 rounded-2xl w-20 bg-orange-500">Sign up</button>
