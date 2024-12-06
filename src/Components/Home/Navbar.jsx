@@ -1,16 +1,28 @@
+// src/components/Navbar.js
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from "../feauters/theme";
+import { IoSunnyOutline } from "react-icons/io5";
+import { MdOutlineDarkMode } from "react-icons/md";
+
+
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const theme = useSelector((state) => state.theme.theme);
+    const dispatch = useDispatch();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const toggleDarkLight = () => {
+        dispatch(toggleTheme());
+    };
+
     return (
-        <div className="bg-zinc-900 text-white p-6 md:p-10 flex justify-between items-center
-    h-32">
+        <div className={`bg-zinc-900 text-white p-6 md:p-10 flex justify-between items-center h-32 ${theme === 'dark' ? 'bg-black' : 'bg-zinc-500'}`}>
             <h1 className="text-4xl font-semibold flex gap-2">
                 Kaif's <span>Store</span>
             </h1>
@@ -19,10 +31,8 @@ function Navbar() {
                 <i className="fas fa-bars text-white text-3xl cursor-pointer"></i>
             </div>
 
-            <div className={`lg:flex gap-9 text-base cursor-pointer items-center ${isMenuOpen ? "block" : "hidden"
-                } lg:block`}>
-
-                <ul className="flex gap-12 mr-8">
+            <div className={`lg:flex gap-9 text-base cursor-pointer items-center ${isMenuOpen ? "block" : "hidden"} lg:block`}>
+                <ul className="flex gap-12 text-sm">
                     <NavLink
                         to="/"
                         className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
@@ -55,7 +65,6 @@ function Navbar() {
                     </NavLink>
                 </ul>
 
-
                 <div className="relative">
                     <input
                         type="text"
@@ -67,8 +76,19 @@ function Navbar() {
                     </span>
                 </div>
 
+                {/* Dark Mode / Light Mode Toggle */}
+                <button
+                    className="text-white text-3xl"
+                    onClick={toggleDarkLight}
+                >
+                    {
+                        theme === 'dark' ?
+                            <IoSunnyOutline /> : <MdOutlineDarkMode />
+                    }
+                </button>
+
                 {/* Sign Up and Log In Buttons */}
-                <div className="flex gap-10">
+                <div className="flex gap-10 text-sm">
                     <Link to={"/signUp"}>
                         <button className="p-2 rounded-2xl w-20 bg-orange-500">Sign up</button>
                     </Link>
@@ -76,7 +96,6 @@ function Navbar() {
                         <button className="p-2 rounded-2xl w-20 bg-orange-500">Log In</button>
                     </Link>
                 </div>
-
             </div>
         </div>
     );

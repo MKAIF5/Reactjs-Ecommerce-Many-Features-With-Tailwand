@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: "Poppins";
 }
 
-/* 
-.fixed-button {
-  position: fixed;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
-  background-color: #007bff;
+
+body.dark {
+  background-color: #1a1a1a;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}; */
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+.text-orange-500 {
+  color: #fb923c;
+}

@@ -10,17 +10,24 @@ function Products() {
 
     const [product, setProduct] = useState(null);
 
-    const API_KEY = "https://dummyjson.com/products";
+    try {
 
-    const getProductData = async () => {
-        const response = await axios(API_KEY)
-        // console.log(response);
-        setProduct(response?.data?.products);
+        const API_KEY = "https://dummyjson.com/products";
+
+        const getProductData = async () => {
+            const response = await axios(API_KEY)
+            console.log(response.data.products);
+            setProduct(response?.data?.products);
+        }
+
+        useEffect(() => {
+            getProductData();
+        }, []);
+
+
+    } catch (error) {
+        console.log("Error", error);
     }
-
-    useEffect(() => {
-        getProductData();
-    }, []);
 
     const [search, setSearch] = useState("");
 
