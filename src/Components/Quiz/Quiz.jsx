@@ -28,7 +28,7 @@ function Quiz() {
                     <div className={`${theme === "dark" ? "text-white" : "text-black"}`}>
                         <div
                             onClick={() => handleClick(0)}
-                            className={`p-3 my-5 cursor-pointer border ${selectedOption === 0 ? 'border-red-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
+                              className={`p-3 my-5 cursor-pointer border ${selectedOption === 0 ? 'border-red-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
                         >
                             <h2>Makeup</h2>
                         </div>
