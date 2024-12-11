@@ -11,7 +11,7 @@ function Quiz() {
 
     return (
         <>
-            <Navbar />
+            <Navbar />  
 
             <div className="flex justify-center my-5" >
                 <div className="bg-zinc-900 w-4/5 min-h-80 p-4 

@@ -1,6 +1,7 @@
 import { CiHeart } from "react-icons/ci";
 import { FiEye } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ReactStars from 'react-stars'
 
 
@@ -14,7 +15,8 @@ function Card(props) {
 
     return (
         <>
-            <div>
+            <Link
+                to={`/product/${props.id}`}>
 
                 <div className='w-64 bg-gray-200 p-3 rounded shadow-lg'>
 
@@ -54,16 +56,16 @@ items-center text-xs h-6'>
                     </div>
                     <div className="flex gap-1">
                         <ReactStars
-                         count={5}
-                         value={props.rating}
-                        // onChange={ratingChanged}
-                        size={24}
-                        color2={'#ffd700'} />
+                            count={5}
+                            value={props.rating}
+                            // onChange={ratingChanged}
+                            size={24}
+                            color2={'#ffd700'} />
 
                         <p className="text-sm text-gray-400 ml-2">( {props.stock} )</p>
                     </div>
                 </div>
-            </div>
+            </Link>
         </>
     )
 }
