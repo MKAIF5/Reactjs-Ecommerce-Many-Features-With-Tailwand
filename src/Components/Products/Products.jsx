@@ -77,28 +77,31 @@ function Products() {
             }
 
             <div>
-                <div className="flex flex-wrap justify-center gap-7 my-10
-                text-white text-wrap">
+                <div className="flex flex-wrap justify-center gap-7 my-10 text-white text-wrap">
+                    {searching.length === 0 ? (
+                        <p className={`${theme === "dark" ? "text-white" : "text-black"}`}>
+                            Product Not Found
+                        </p>
+                    ) : (
+                        ""
+                    )}
 
-                    {searching.length === 0 ? <p className={`${theme
-                        === "dark" ? "text-white" : "text-black"}`}
-                    >Product Not Found</p> : ""}
-
-
-                    {
-                        searching?.map((item) => {
-                            return <Card
+                    {searching?.map((item) => {
+                        return (
+                            <Card
                                 key={item.id}
+                                id={item.id}
                                 name={item.title}
                                 image={item.thumbnail}
                                 price={item.price}
                                 discountPercentage={item.discountPercentage}
                                 rating={item.rating}
                                 stock={item.stock}
-                            />;
-                        })
-                    }
+                            />
+                        );
+                    })}
                 </div>
+
             </div>
 
         </>

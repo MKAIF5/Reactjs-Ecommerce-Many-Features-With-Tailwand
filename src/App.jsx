@@ -8,6 +8,7 @@ import SignUp from './Components/signUp/SignUp';
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import ProductDetail from './Components/Products/ProductDetail';
 import "./App.css";
 
 
@@ -35,7 +36,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
-
+                <Route path="/product/:id" element={<ProductDetail />} />
             </Routes>
         </>
     );

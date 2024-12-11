@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navbar from "../Home/Navbar";
+import { useSelector } from "react-redux";
 
 function Contact() {
+    const theme = useSelector((state) => state.theme.theme);
+   
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -27,12 +30,12 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         let validationErrors = {};
         if (!formData.name) validationErrors.name = "Name is required!";
         if (!formData.email) validationErrors.email = "Email is required!";
         if (!formData.message) validationErrors.message = "Message cannot be empty!";
-        
+
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
             setIsSubmitted(false);
@@ -44,6 +47,8 @@ function Contact() {
             console.log("Form data submitted:", formData);
         }
     };
+
+
 
     return (
         <>
@@ -59,11 +64,11 @@ function Contact() {
                             <div className="text-red-600 text-center mb-4">Please fill out all fields correctly!</div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900 p-6 rounded-lg shadow-md text-white">
-                                <div className="flex justify-center">
-                                    <p className="text-xl font-semibold">Contact US</p>
-                                </div>
-                            <div>
+                        <form onSubmit={handleSubmit} className={`space-y-6 p-6 rounded-lg shadow-md text-white ${theme === "dark" ? "bg-black" : "bg-gray-300"}`}>
+                            <div className="flex justify-center">
+                                <p  className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-black"}`}>Contact US</p>
+                            </div>
+                            <div className={`${theme === "dark" ? "text-white" : "text-black"}`}>
                                 <label htmlFor="name" className="block text-sm font-medium">Full Name</label>
                                 <input
                                     type="text"
@@ -76,7 +81,7 @@ function Contact() {
                                 {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                             </div>
 
-                            <div>
+                            <div  className={`${theme === "dark" ? "text-white" : "text-black"}`}>
                                 <label htmlFor="email" className="block text-sm font-medium">Email Address</label>
                                 <input
                                     type="email"
@@ -89,7 +94,7 @@ function Contact() {
                                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                             </div>
 
-                            <div>
+                            <div  className={`${theme === "dark" ? "text-white" : "text-black"}`}>
                                 <label htmlFor="message" className="block text-sm font-medium">Message</label>
                                 <textarea
                                     id="message"
@@ -102,7 +107,7 @@ function Contact() {
                                 {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                             </div>
 
-                            <div>
+                            <div  className={`${theme === "dark" ? "text-white" : "text-black"}`}>
                                 <button
                                     type="submit"
                                     className="w-full py-2 px-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
