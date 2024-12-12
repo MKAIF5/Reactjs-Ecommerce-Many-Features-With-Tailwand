@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
 import Navbar from '../Home/Navbar';
 
 function AddProduct() {
-    const [productName, setProductName] = useState('');
-    const [productDescription, setProductDescription] = useState('');
-    const [productPhoto, setProductPhoto] = useState(null);
-    const [category, setCategory] = useState('');
-    const [price, setPrice] = useState('');
-    const [quantity, setQuantity] = useState('');
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log({
-            productName,
-            productDescription,
-            productPhoto,
-            category,
-            price,
-            quantity,
-        });
-    };
+        try {
 
-    const handlePhotoChange = (e) => {
-        setProductPhoto(e.target.files[0]);
+        const formData = new FormData(e.target)
+        // console.log(formData.entries());
+
+        for (const pair of formData.entries()) {
+            console.log(pair[0] + "," + pair[1]);
+
+        }
+
+
+
+            // const response = await axios.post(
+            //   "https://dummyjson.com/products/add",
+            // );      
+            // console.log("response ", response);
+        } catch (error) {
+            console.log("error ", error);
+
+        }
+
     };
 
     return (
@@ -38,8 +39,6 @@ function AddProduct() {
                             <input
                                 type="text"
                                 id="productName"
-                                value={productName}
-                                onChange={(e) => setProductName(e.target.value)}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product name"
                                 required
@@ -50,8 +49,6 @@ function AddProduct() {
                             <label htmlFor="productDescription" className="block text-sm font-medium text-gray-600">Product Description</label>
                             <textarea
                                 id="productDescription"
-                                value={productDescription}
-                                onChange={(e) => setProductDescription(e.target.value)}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product description"
                                 rows="4"
@@ -65,9 +62,8 @@ function AddProduct() {
                                 type="file"
                                 id="productPhoto"
                                 accept="image/*"
-                                onChange={handlePhotoChange}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                required
+                                // required
                             />
                         </div>
 
@@ -76,8 +72,6 @@ function AddProduct() {
                             <input
                                 type="text"
                                 id="category"
-                                value={category}
-                                onChange={(e) => setCategory(e.target.value)}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product category"
                                 required
@@ -89,8 +83,6 @@ function AddProduct() {
                             <input
                                 type="number"
                                 id="price"
-                                value={price}
-                                onChange={(e) => setPrice(e.target.value)}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product price"
                                 required
@@ -102,8 +94,6 @@ function AddProduct() {
                             <input
                                 type="number"
                                 id="quantity"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product quantity"
                                 required
