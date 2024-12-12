@@ -120,14 +120,15 @@ export default function ProductDetail(props) {
                 <div className="reviews mt-10">
                     <h3 className={`text-xl font-semibold mb-5 ${theme === "dark" ? "text-white" : "text-black"}`}>Customer Reviews</h3>
                     {product?.reviews?.map((review, i) => (
-                        <div key={i} className="review bg-slate-100 rounded-lg p-5 mb-4 shadow-md">
+                        <div key={i} className={`review rounded-lg p-5 mb-4 shadow-md 
+                        ${theme === "dark" ? "bg-zinc-800" : "bg-slate-100"}`}>
                             <div className="flex items-center justify-between mb-3">
                                 <h5 className="text-lg font-semibold">{review.reviewerName}</h5>
-                                <span className="text-xs text-gray-500">
+                                <span className={`text-xs ${theme === "dark" ? "text-gray-300" : "text-gray-500"}`}>
                                     {formatDistanceToNow(new Date(review.date), { addSuffix: true })}
                                 </span>
                             </div>
-                            <p className="text-gray-700">{review.comment}</p>
+                            <p className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>{review.comment}</p>
                         </div>
                     ))}
                 </div>

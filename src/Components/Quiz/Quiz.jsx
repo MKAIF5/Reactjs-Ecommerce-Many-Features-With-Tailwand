@@ -42,14 +42,14 @@ function Quiz() {
 
                         <div
                             onClick={() => handleClick(2)}
-                            className={`p-3 my-5 cursor-pointer border ${selectedOption === 2 ? 'border-blue-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
+                            className={`p-3 my-5 cursor-pointer border ${selectedOption === 2 ? 'border-red-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
                         >
                             <h2>Foods</h2>
                         </div>
 
                         <div
                             onClick={() => handleClick(3)}
-                            className={`p-3 my-5 cursor-pointer border ${selectedOption === 3 ? 'border-yellow-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
+                            className={`p-3 my-5 cursor-pointer border ${selectedOption === 3 ? 'border-red-500' : ''} ${theme === "dark" ? "border-white" : "border-black"}`}
                         >
                             <h2>Medicine</h2>
                         </div>

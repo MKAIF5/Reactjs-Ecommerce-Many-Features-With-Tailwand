@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ProductDetail from './Components/Products/ProductDetail';
 import "./App.css";
+import AddProduct from './Components/Products/AddProduct';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/addProduct" element={<AddProduct />} />
             </Routes>
         </>
     );

@@ -8,7 +8,7 @@ function Body() {
             <br />
             <h1 className="text-center text-xl">Explore The Best Products At Unbeatable Prices</h1>
             <div className="flex justify-center my-10">
-                <Link to="/products" className="p-2 bg-orange-500 text-white rounded-xl font-medium">View All Products</Link>
+                <Link to="/addProduct" className="p-2 bg-orange-500 text-white rounded-xl font-medium">Add Your Products</Link>
             </div>
         </div>
     );
