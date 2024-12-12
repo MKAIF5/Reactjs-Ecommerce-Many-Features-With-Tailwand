@@ -22,6 +22,7 @@
     "react-router-dom": "^6.28.0",
     "react-stars": "^2.2.5",
     "react-switch": "^7.0.0",
+    "sweetalert2": "^11.14.5",
     "swr": "^2.2.5"
   },
   "devDependencies": {
