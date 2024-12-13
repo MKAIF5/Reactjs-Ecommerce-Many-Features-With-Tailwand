@@ -1,20 +1,20 @@
 import Navbar from '../Home/Navbar';
 
 function AddProduct() {
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
 
-        const formData = new FormData(e.target)
-        // console.log(formData.entries());
+            const formData = new FormData(e.target)
+            // console.log(formData.entries());
 
-        for (const pair of formData.entries()) {
-            console.log(pair[0] + "," + pair[1]);
-
-        }
-
+            for (const pair of formData.entries()) {
+                console.log(pair[0] + "," + pair[1]);
+            }
 
 
+            return;
             // const response = await axios.post(
             //   "https://dummyjson.com/products/add",
             // );      
@@ -37,6 +37,7 @@ function AddProduct() {
                         <div>
                             <label htmlFor="productName" className="block text-sm font-medium text-gray-600">Product Name</label>
                             <input
+                                name='product-name'
                                 type="text"
                                 id="productName"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -48,6 +49,7 @@ function AddProduct() {
                         <div>
                             <label htmlFor="productDescription" className="block text-sm font-medium text-gray-600">Product Description</label>
                             <textarea
+                                name='product-description'
                                 id="productDescription"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 placeholder="Enter product description"
@@ -63,13 +65,14 @@ function AddProduct() {
                                 id="productPhoto"
                                 accept="image/*"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                // required
+                            // required
                             />
                         </div>
 
                         <div>
                             <label htmlFor="category" className="block text-sm font-medium text-gray-600">Category</label>
                             <input
+                                name='category'
                                 type="text"
                                 id="category"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -81,6 +84,7 @@ function AddProduct() {
                         <div>
                             <label htmlFor="price" className="block text-sm font-medium text-gray-600">Price</label>
                             <input
+                                name='price'
                                 type="number"
                                 id="price"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -92,6 +96,7 @@ function AddProduct() {
                         <div>
                             <label htmlFor="quantity" className="block text-sm font-medium text-gray-600">Quantity</label>
                             <input
+                                name='quantity'
                                 type="number"
                                 id="quantity"
                                 className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"

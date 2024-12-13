@@ -8,11 +8,9 @@
 
 body.dark {
   background-color: #1a1a1a;
-  color: white;
 }
 body.light {
   background-color: white;
-  color: black;
 }
 .text-orange-500 {
   color: #fb923c;
