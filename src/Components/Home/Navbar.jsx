@@ -25,7 +25,7 @@ function Navbar() {
             </h1>
 
             <div className="lg:hidden" onClick={toggleMenu}>
-                <i className="fas fa-bars text-white text-3xl cursor-pointer"></i>
+                <i className={`${theme === "dark" ? "text-white" : "text-black"} fas fa-bars text-3xl cursor-pointer`}></i>
             </div>
 
             <div className={`lg:flex gap-9 text-base cursor-pointer items-center ${isMenuOpen ? "block" : "hidden"} lg:block`}>

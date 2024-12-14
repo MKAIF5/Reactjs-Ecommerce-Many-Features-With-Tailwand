@@ -64,7 +64,7 @@ function Contact() {
                             <div className="text-red-600 text-center mb-4">Please fill out all fields correctly!</div>
                         )}
 
-                        <form onSubmit={handleSubmit} className={`space-y-6 p-6 rounded-lg shadow-md text-white ${theme === "dark" ? "bg-black" : "bg-gray-300"}`}>
+                        <form onSubmit={handleSubmit} className={`space-y-6 p-6 rounded-lg shadow-md text-white ${theme === "dark" ? "bg-gray-700" : "bg-gray-300"}`}>
                             <div className="flex justify-center">
                                 <p  className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-black"}`}>Contact US</p>
                             </div>

@@ -1,9 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import { StrictMode } from 'react';
 import { BrowserRouter } from "react-router-dom";
-import App from './App.jsx';
 import { store } from "./Components/feauters/store.jsx";
 import { Provider } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
+import App from './App.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         v7_startTransition: true,
       }}>
         <App />
+        <Toaster/>
       </BrowserRouter>
     </Provider>
   </StrictMode>

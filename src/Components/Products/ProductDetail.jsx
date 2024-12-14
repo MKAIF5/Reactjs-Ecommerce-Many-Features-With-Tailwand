@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import Swal from 'sweetalert2'
 
 
-export default function ProductDetail(props) {
+export default function ProductDetail() {
 
     const theme = useSelector((state) => state.theme.theme);
 
@@ -123,7 +123,7 @@ export default function ProductDetail(props) {
                         <div key={i} className={`review rounded-lg p-5 mb-4 shadow-md 
                         ${theme === "dark" ? "bg-zinc-800" : "bg-slate-100"}`}>
                             <div className="flex items-center justify-between mb-3">
-                                <h5 className="text-lg font-semibold">{review.reviewerName}</h5>
+                                <h5 className={` ${theme === "dark" ? "text-white" : "text-black"} text-lg font-semibold`}>{review.reviewerName}</h5>
                                 <span className={`text-xs ${theme === "dark" ? "text-gray-300" : "text-gray-500"}`}>
                                     {formatDistanceToNow(new Date(review.date), { addSuffix: true })}
                                 </span>
