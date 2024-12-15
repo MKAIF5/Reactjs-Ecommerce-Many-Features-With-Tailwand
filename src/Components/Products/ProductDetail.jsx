@@ -85,7 +85,7 @@ export default function ProductDetail() {
                             <label className={`text-lg font-medium ${theme === "dark" ? "text-white" : "text-black"}`}>Quantity :</label>
                             <div className="flex items-center gap-4">
                                 <button
-                                    className="bg-orange-500 text-white rounded-full p-2"
+                                    className="bg-orange-500 hover:bg-orange-600 text-white rounded-full p-2"
                                     onClick={() => {
                                         setQuantity(quantity + 1)
                                     }
@@ -95,7 +95,7 @@ export default function ProductDetail() {
                                 </button>
                                 <span className={`text-xl ${theme === "dark" ? "text-white" : "text-black"}`}>{quantity}</span>
                                 <button
-                                    className="bg-orange-500 text-white rounded-full p-2"
+                                    className="bg-orange-500 hover:bg-orange-600 text-white rounded-full p-2"
                                     onClick={() => {
                                         if (quantity > 1) {
                                             setQuantity(quantity - 1);
@@ -110,7 +110,7 @@ export default function ProductDetail() {
                         <p className={`text-sm ${theme === "dark" ? "text-white" : "text-gray-600"}`}>{product?.description}</p>
 
                         <div className="mt-auto flex justify-center">
-                            <button onClick={alertClick} className="bg-orange-500 text-white py-2 px-5 rounded-md">
+                            <button onClick={alertClick} className="bg-orange-500 animation text-white py-2 px-5 rounded-md">
                                 Add to Cart
                             </button>
                         </div>

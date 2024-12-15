@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import Navbar from "../Home/Navbar";
 
-function Messages() {
+function Messages() {   
     const theme = useSelector((state) => state.theme.theme);
 
     const [activeMessage, setActiveMessage] = useState(null);
@@ -16,7 +16,7 @@ function Messages() {
     ];
 
     const handleMessageClick = (id) => {
-        const message = messages.find((msg) => msg.id === id);
+        const message = messages.find((msg) => msg.id === id);s
         setActiveMessage(message);
     };
 

@@ -15,7 +15,7 @@ function Products() {
 
     try {
 
-        const API_KEY = "https://dummyjson.com/products";
+        const API_KEY = "https://dummyjson.com/products?limit=100";
 
         const getProductData = async () => {
             const response = await axios(API_KEY)
