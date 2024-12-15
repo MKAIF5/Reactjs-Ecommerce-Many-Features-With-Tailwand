@@ -36,7 +36,7 @@ function Body() {
                         <h3 className="text-lg font-semibold mt-4">Man Plaid Shirt</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                            34.99</p>
+                                34.99</p>
                             <p className="text-lg text-green-500 mt-2">$28.86</p>
                         </div>
                         <Link to="/product/85" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -49,7 +49,7 @@ function Body() {
                         <h3 className="text-lg font-semibold mt-4">Strawerry</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                            3.99</p>
+                                3.99</p>
                             <p className="text-lg text-green-500 mt-2">$3.21</p>
                         </div>
                         <Link to="/product/40" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -62,7 +62,7 @@ function Body() {
                         <h3 className="text-lg font-semibold mt-4">Apple MacBook Pro 14 Inch Space Grey</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                            1999.99</p>
+                                1999.99</p>
                             <p className="text-lg text-green-500 mt-2">$1814.99</p>
                         </div>
                         <Link to="/product/78" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -75,7 +75,7 @@ function Body() {
                         <h3 className="text-lg font-semibold mt-4">Microwave Oven</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                            89.99</p>
+                                89.99</p>
                             <p className="text-lg text-green-500 mt-2">$73.13</p>
                         </div>
                         <Link to="/product/66" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
