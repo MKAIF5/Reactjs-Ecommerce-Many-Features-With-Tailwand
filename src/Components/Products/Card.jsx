@@ -16,7 +16,7 @@ function Card(props) {
     return (
         <>
             <Link to={`/product/${props.id}`}>
-                <div className="w-64 bg-gray-200 p-3 rounded shadow-lg">
+                <div className="w-64 bg-gray-200 p-3 rounded animation">
                     <div className="flex justify-between">
                         <div className="text-white w-14 bg-[#db4444] flex justify-center items-center text-xs h-6">
                             <p>-40%</p>

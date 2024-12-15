@@ -5,6 +5,7 @@
   font-family: "Poppins";
   scroll-behavior: smooth;
 }
+/* theme */
 
 body.dark {
   background-color: #1a1a1a;
@@ -12,6 +13,17 @@ body.dark {
 body.light {
   background-color: white;
 }
-.text-orange-500 {
-  color: #fb923c;
+
+.correct{
+  background-color: #00d397;
+}
+
+.wrong{
+  background-color: #ff4a4a;
+}
+
+/* animation and hovers */
+
+.animation{
+ @apply shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl
 }

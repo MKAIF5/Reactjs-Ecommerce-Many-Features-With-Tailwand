@@ -53,7 +53,7 @@ export default function ProductDetail() {
                                         key={i}
                                         src={image}
                                         alt={`Thumbnail ${i}`}
-                                        className="p-3 w-24 h-24 object-cover cursor-pointer border rounded-md transition-all hover:border-blue-500"
+                                        className ="animation p-3 w-24 h-24 object-cover cursor-pointer border rounded-md transition-all hover:border-blue-500"
                                         onMouseOver={() => setSelectedImage(image)}
                                     />
                                 ))}
@@ -62,7 +62,7 @@ export default function ProductDetail() {
 
                         <div className="w-full">
                             <img
-                                className="w-full h-auto object-contain border rounded-md"
+                                className="animation w-full h-auto object-contain border rounded-md"
                                 src={selectedImage || product?.images[0]}
                                 alt="Main Product"
                             />
