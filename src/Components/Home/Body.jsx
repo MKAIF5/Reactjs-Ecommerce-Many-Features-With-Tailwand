@@ -30,13 +30,15 @@ function Body() {
                 <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-3xl text-center font-semibold`}>
                     Special Offers
                 </h2>
-                <div className={`${theme === "dark" ? "text-white" : "text-black"} grid grid-cols-2 md:grid-cols-4 gap-5 mx-10 mt-8`}>
+                <div className={`${theme === "dark" ? "text-white" : "text-black"} grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-10 mt-8`}>
+                    {/* Product Card 1 */}
                     <div className="p-5 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src={shirt} alt="Clothes" className="w-full h-60 object-cover rounded-lg" />
+                        <img src={shirt} alt="Clothes" className="w-full h-48 object-cover rounded-lg" />
                         <h3 className="text-lg font-semibold mt-4">Man Plaid Shirt</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                                34.99</p>
+                                34.99
+                            </p>
                             <p className="text-lg text-green-500 mt-2">$28.86</p>
                         </div>
                         <Link to="/product/85" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -44,12 +46,14 @@ function Body() {
                         </Link>
                     </div>
 
+                    {/* Product Card 2 */}
                     <div className="p-5 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src={starwberry} alt="Grocery" className="w-full h-60 object-cover rounded-lg" />
-                        <h3 className="text-lg font-semibold mt-4">Strawerry</h3>
+                        <img src={starwberry} alt="Grocery" className="w-full h-48 object-cover rounded-lg" />
+                        <h3 className="text-lg font-semibold mt-4">Strawberry</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                                3.99</p>
+                                3.99
+                            </p>
                             <p className="text-lg text-green-500 mt-2">$3.21</p>
                         </div>
                         <Link to="/product/40" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -57,12 +61,14 @@ function Body() {
                         </Link>
                     </div>
 
+                    {/* Product Card 3 */}
                     <div className="p-5 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src={laptop} alt="Electronics" className="w-full h-60 object-cover rounded-lg" />
+                        <img src={laptop} alt="Electronics" className="w-full h-48 object-cover rounded-lg" />
                         <h3 className="text-lg font-semibold mt-4">Apple MacBook Pro 14 Inch Space Grey</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                                1999.99</p>
+                                1999.99
+                            </p>
                             <p className="text-lg text-green-500 mt-2">$1814.99</p>
                         </div>
                         <Link to="/product/78" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
@@ -70,12 +76,14 @@ function Body() {
                         </Link>
                     </div>
 
+                    {/* Product Card 4 */}
                     <div className="p-5 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src={Micro} alt="Sports" className="w-full h-60 object-cover rounded-lg" />
+                        <img src={Micro} alt="Sports" className="w-full h-48 object-cover rounded-lg" />
                         <h3 className="text-lg font-semibold mt-4">Microwave Oven</h3>
                         <div className="flex gap-3">
                             <p className="text-lg text-red-500 mt-2 line-through">
-                                89.99</p>
+                                89.99
+                            </p>
                             <p className="text-lg text-green-500 mt-2">$73.13</p>
                         </div>
                         <Link to="/product/66" className="mt-3 inline-block p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
