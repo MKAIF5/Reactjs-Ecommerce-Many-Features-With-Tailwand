@@ -1,10 +1,10 @@
-import axios from "axios";
-import Navbar from "../Home/Navbar";
 import { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { useSelector } from "react-redux";
+import axios from "axios";
+import Navbar from "../Home/Navbar";
 import Card from "./Card";
 import loading from "./img/ZKZg.gif";
-import { useSelector } from "react-redux";
 
 function Products() {
 
@@ -19,7 +19,6 @@ function Products() {
 
         const getProductData = async () => {
             const response = await axios(API_KEY)
-            console.log(response.data.products);
             setProduct(response?.data?.products);
         }
 

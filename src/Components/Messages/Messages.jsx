@@ -16,7 +16,7 @@ function Messages() {
     ];
 
     const handleMessageClick = (id) => {
-        const message = messages.find((msg) => msg.id === id);s
+        const message = messages.find((msg) => msg.id === id);
         setActiveMessage(message);
     };
 
@@ -24,8 +24,8 @@ function Messages() {
         <>
             <Navbar />
             <div className={`p-6 md:p-10 ${theme === "dark" ? "bg-zinc-900 text-white" : "bg-white text-black"}`}>
-                <div className="flex justify-between items-center mb-8">
-                    <h1 className="text-4xl font-semibold">Messages</h1>
+                <div className="flex justify-center items-center mb-8">
+                    <h1 className="text-4xl font-semibold text-center">Messages</h1>
                 </div>
 
                 <div className="space-y-4">
@@ -33,7 +33,7 @@ function Messages() {
                         <div
                             key={message.id}
                             onClick={() => handleMessageClick(message.id)}
-                            className={`flex justify-between items-center p-4 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out transform hover:scale-105 ${activeMessage?.id === message.id ? 'bg-gray-600' : ''}`}
+                            className={`flex flex-col md:flex-row justify-between items-center p-4 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out transform hover:scale-105 ${activeMessage?.id === message.id ? 'bg-gray-600' : ''}`}
                         >
                             <div className="flex items-center space-x-4">
                                 <img src={message.avatar} alt={message.name} className="w-12 h-12 rounded-full" />
@@ -43,7 +43,7 @@ function Messages() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4">
+                            <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 mt-4 md:mt-0">
                                 <div className="text-sm text-gray-400">{message.time}</div>
                                 <div
                                     className={`text-sm ${message.status === "Sent" ? "text-yellow-500" : message.status === "Delivered" ? "text-orange-500" : message.status === "Replied" ? "text-orange-500" : "text-gray-500"}`}
@@ -78,8 +78,7 @@ function Messages() {
                     </div>
                 )}
 
-                {/* Fixed position input field and icon */}
-                <div className="fixed top-36 right-0 w-80 bg-gray-800 p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+                <div className="fixed top-40 right-4 w-full sm:w-80 bg-gray-800 p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
                     <div className="relative w-full">
                         <input
                             type="text"

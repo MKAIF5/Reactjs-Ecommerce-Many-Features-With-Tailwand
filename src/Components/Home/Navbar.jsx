@@ -4,11 +4,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from "../feauters/theme";
 import { IoSunnyOutline } from "react-icons/io5";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material'
+import { Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar() {
-
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const theme = useSelector((state) => state.theme.theme);
@@ -25,17 +25,16 @@ function Navbar() {
     };
 
     return (
-
         <>
-
             <div className={`p-6 md:p-10 flex justify-between items-center h-32 ${theme === 'dark' ? 'bg-black' : 'bg-gray-200'}`}>
                 <Link
                     to="/"
-                    className={`text-4xl font-semibold flex gap-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+                    className={`text-4xl font-semibold flex gap-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}
+                >
                     Kaif's <span>Store</span>
                 </Link>
 
-                <div className="xl:hidden">
+                <div className={`xl:hidden ${theme === "dark" ? "text-white" : "text-black"}`}>
                     <IconButton
                         edge="start"
                         color="inherit"
@@ -94,6 +93,12 @@ function Navbar() {
 
                 {/* Drawer for mobile menu */}
                 <Drawer anchor="right" open={drawerOpen} onClose={() => toggleDrawer(false)}>
+                    <div className="flex justify-end p-4">
+                        <IconButton onClick={() => toggleDrawer(false)} sx={{ fontSize: "36px", color: "black" }}>
+                            <CloseIcon />
+                        </IconButton>
+                    </div>
+
                     <List className="w-64" onClick={() => toggleDrawer(false)} onKeyDown={() => toggleDrawer(false)}>
                         <ListItem>
                             <ListItemText>
