@@ -99,7 +99,14 @@ function Navbar() {
                         </IconButton>
                     </div>
 
-                    <List className="w-64" onClick={() => toggleDrawer(false)} onKeyDown={() => toggleDrawer(false)}>
+                    <List className="w-72" onClick={() => toggleDrawer(false)} onKeyDown={() => toggleDrawer(false)}>
+                        <ListItem>
+                            <ListItemText>
+                                <button className="text-black text-3xl" onClick={toggleDarkLight}>
+                                    {theme === 'dark' ? <IoSunnyOutline /> : <MdOutlineDarkMode className="text-black" />}
+                                </button>
+                            </ListItemText>
+                        </ListItem>
                         <ListItem>
                             <ListItemText>
                                 <NavLink to="/" className={({ isActive }) => (isActive ? 'text-orange-500' : '')}>

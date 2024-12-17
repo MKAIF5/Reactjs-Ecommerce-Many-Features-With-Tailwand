@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cd dist && copy index.html 200.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "surge ./dist --domain kaif-ecommerce-many-feauters.surge.sh"
