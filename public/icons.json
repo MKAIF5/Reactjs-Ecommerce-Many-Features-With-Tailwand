@@ -1,12 +1,4 @@
 {
-  "short_name": "Kaif's Store",
-  "id": "Kaif's Store",
-  "theme_color": "#f97316",
-  "background_color": "#000000",
-  "start_url": "/",
-  "display": "fullscreen",
-  "description": "this is a kaif store",
-  "categories": ["shopping", "business", "lifestyle"],
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",

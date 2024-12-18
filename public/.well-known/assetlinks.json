@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "sh.surge.kaif_ecommerce_many_feauters.twa",
+        "sha256_cert_fingerprints": ["76:23:D8:8F:11:7B:EC:C8:2C:32:12:6A:34:2B:AD:2A:97:3A:D7:7F:12:D3:DE:F9:81:AA:1A:72:D7:50:98:B3"]
+      }
+    }]
