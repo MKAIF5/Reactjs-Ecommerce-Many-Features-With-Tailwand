@@ -4,24 +4,17 @@ import Navbar from '../Home/Navbar';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-
 function AddProduct() {
-
     const { register, handleSubmit, formState: { errors } } = useForm();
-    // console.log(errors);
-
-    const theme = useSelector((state) => state.theme.theme)
+    const theme = useSelector((state) => state.theme.theme);
 
     const formSubmitHandler = async (formValues) => {
         try {
-            // console.log(formValues);
-
             const response = await axios.post(
                 "https://dummyjson.com/products/add",
                 formValues
             );
-            // console.log("response ", response);
-            toast.success("Sent Your Message Successfully");
+            toast.success("Product Added Successfully");
         } catch (error) {
             console.log("error ", error);
         }
@@ -30,8 +23,8 @@ function AddProduct() {
     return (
         <>
             <Navbar />
-            <div className={`${theme === "dark" ? "bg-zinc-900" : "bg-gray-100"} min-h-screen flex items-center justify-center py-8`}>
-                <div className={`${theme === "dark" ? "bg-gray-700" : "bg-white"} p-8 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-2xl`}>
+            <div className={`${theme === "dark" ? "bg-zinc-900" : "bg-gray-100"} min-h-screen flex items-center justify-center py-8 px-4`}>
+                <div className={`${theme === "dark" ? "bg-gray-700" : "bg-white"} p-8 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl`}>
                     <h2 className={`text-3xl font-semibold text-center mb-6 ${theme === "dark" ? "text-white" : "text-gray-700"}`}>Add New Product</h2>
                     <form onSubmit={handleSubmit(formSubmitHandler)} className="space-y-6">
                         <div>
